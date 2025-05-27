@@ -1,0 +1,30 @@
+public class Main {
+    public static void main(String[] args) {
+
+        int[][] arr ={
+                {10, 20, 30, 0},
+                {40, 50, 60, 0},
+                {0, 0, 0, 0}
+        };
+
+        for (int i = 0; i <2 ; i++) {
+            for (int j = 0; j <3 ; j++) {
+                arr[i][3] += arr[i][j];
+            }
+        }
+
+        for (int i = 0; i <4 ; i++) {
+            for (int j = 0; j <2; j++) {
+                arr[2][i] += arr[j][i];
+            }
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                // %4d: 숫자를 4칸으로 맞춰 정렬
+                System.out.printf("%4d", arr[i][j]);
+            }
+            System.out.println(); // 줄바꿈
+        }
+    }
+}
